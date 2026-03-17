@@ -119,7 +119,7 @@ function StatCard({ label, value, sub, trend,  accent }
       <div className="flex items-start justify-between mb-4">
         <div className="w-8 h-8 rounded-lg flex items-center justify-center"
           style={{ background: accent ? "rgba(201,169,110,0.1)" : "rgba(255,255,255,0.04)", color: accent ? "#c9a96e" : "#6b7280" }}>
-          <IconComp />
+          {/* <IconComp /> */}
         </div>
         <span className={`flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-full tabular-nums tracking-wide ${trend.dir === "up" ? "text-emerald-400" : "text-red-400"}`}
           style={{ background: trend.dir === "up" ? "rgba(52,211,153,0.07)" : "rgba(248,113,113,0.07)" }}>
@@ -213,7 +213,7 @@ function SideLink({   label, active, collapsed, onClick }
         : { color: "#4b5563", border: "1px solid transparent" }}
       onMouseEnter={e => { if (!active) e.currentTarget.style.color = "#9ca3af"; }}
       onMouseLeave={e => { if (!active) e.currentTarget.style.color = "#4b5563"; }}>
-      <span className="shrink-0"><IconComp /></span>
+      {/* <span className="shrink-0"><IconComp /></span> */}
       {!collapsed && <span className="text-[12.5px] font-medium tracking-wide">{label}</span>}
     </button>
   );
@@ -255,7 +255,7 @@ export  function Dashboard() {
   };
 
   return (
-    <>
+    <div>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:ital,wght@0,400;0,500&display=swap');
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -548,6 +548,6 @@ export  function Dashboard() {
           </div>
         </main>
       </div>
-    </>
+    </div>
   );
 }
